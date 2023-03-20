@@ -1,32 +1,36 @@
-import { useState } from 'react';
-import {
-  StyleSheet,
-  View,
-  Text,
-  TextInput,
-  Button,
-  Alert,
-  ScrollView,
-} from 'react-native';
-// import the screens
+// Import two screens "start" and "chat"
 import Start from './components/Start';
 import Chat from './components/Chat';
-// import react Navigation
+import React from 'react';
+
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-// Create the navigator
+// Create navigation stack
+
 const Stack = createNativeStackNavigator();
 
-const App = () => {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Start">
-        <Stack.Screen name="Start" component={Start} />
-        <Stack.Screen name="Chat" component={Chat} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-};
-
-export default App;
+export default class App extends React.Component {
+  render() {
+    return (
+      <NavigationContainer>
+        <Stack.Navigator
+          initialRouteName="Start"
+          screenOptions={{ headerTitleAlign: 'center' }}
+        >
+          <Stack.Screen
+            name="Start"
+            component={Start}
+            options={{ headerShown: false }} // Hide header
+          />
+          <Stack.Screen
+            name="Chat"
+            component={Chat}
+            //Title of header
+            options={({ route }) => ({ title: route.params.name })}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    );
+  }
+}
