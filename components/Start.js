@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
   Dimensions,
 } from 'react-native';
-import Image from '../assets/background-image.png';
+import Image from './Image.png';
 const backgroundColors = {
   black: '#090C08',
   purple: '#474056',
