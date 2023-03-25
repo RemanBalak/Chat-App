@@ -1,15 +1,6 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  Button,
-  TextInput,
-  StyleSheet,
-  ImageBackground,
-  TouchableOpacity,
-  Dimensions,
-} from 'react-native';
-import Image from './Image.png';
+import { View, Text, Button, TextInput,StyleSheet, ImageBackground, TouchableOpacity, Dimensions } from 'react-native';
+import Image from "./Image.png";
 const backgroundColors = {
   black: '#090C08',
   purple: '#474056',
@@ -19,14 +10,17 @@ const backgroundColors = {
 
 export default class Start extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = { name: '', color: '' };
+    super (props);
+    this.state={name: '', color:''}
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <ImageBackground source={Image} style={styles.image}>
+        <ImageBackground
+          source={Image}
+          style={styles.image}
+        >
           <Text style={styles.title}>Chat App</Text>
           <View style={styles.startWrapper}>
             <View style={styles.inputWrapper}>
@@ -87,8 +81,8 @@ export default class Start extends React.Component {
                 })
               }
               accessible={true}
-              accessibilityLabel="Start chatting"
-              accessibilityHint="Enter the chat room, where you can send messages to your contacts."
+              accessibilityLabel='Start chatting'
+              accessibilityHint='Enter the chat room, where you can send messages to your contacts.'
             >
               <Text style={styles.buttonText}>Start Chatting</Text>
             </TouchableOpacity>
@@ -114,7 +108,7 @@ const styles = StyleSheet.create({
   },
 
   title: {
-    flex: 1,
+    flex:1,
     fontSize: 45,
     fontWeight: '600',
     color: '#FFFFFF',
@@ -168,7 +162,7 @@ const styles = StyleSheet.create({
     left: -2,
     paddingLeft: 35,
     paddingRight: 20,
-    width: '101%',
+    width: '101%'
   },
 
   colorWrapper: {
@@ -185,7 +179,7 @@ const styles = StyleSheet.create({
 
   colors: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-between'
   },
 
   color: {

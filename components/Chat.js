@@ -12,8 +12,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import NetInfo from '@react-native-community/netinfo';
 import MapView from 'react-native-maps';
 
-const firebase = require('firebase');
-require('firebase/firestore');
+const firebase = require('firebase/firestore');
 
 // declare empty offline alert system message
 let offlineAlert = {
@@ -36,12 +35,13 @@ export default class Chat extends React.Component {
 
     // Your web app's Firebase configuration
     const firebaseConfig = {
-      apiKey: 'AIzaSyA-2FxHetIu2-UbQ2X2mXXnREKcac2fF7A',
-      authDomain: 'test-e14ab.firebaseapp.com',
-      projectId: 'test-e14ab',
-      storageBucket: 'test-e14ab.appspot.com',
-      messagingSenderId: '371306460083',
-      appId: '1:371306460083:web:0e161c459cb5e71a5cd1c6',
+      apiKey: 'AIzaSyAUUrJvFshn1-TwQarCfsL0nUZtKyKnewQ',
+      authDomain: 'chatapp-fb08f.firebaseapp.com',
+      projectId: 'chatapp-fb08f',
+      storageBucket: 'chatapp-fb08f.appspot.com',
+      messagingSenderId: '209474834110',
+      appId: '1:209474834110:web:9bc744b7002c2229f598ef',
+      measurementId: 'G-0W2TYKY7RN',
     };
 
     // Initialize Firebase
